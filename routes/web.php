@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('beers', 'BeerController');
+// Route::get('/beers','BeerController@index')->name('beers.index');
