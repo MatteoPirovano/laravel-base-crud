@@ -17,7 +17,7 @@ class CreateBeersTable extends Migration
             $table->id();
             $table->string('name', 50);
             $table->string('country', 50);
-            $table->float('alcohol content', 4, 1);
+            $table->float('alcohol_content', 4, 1);
             $table->text('description');
             $table->timestamps();
         });

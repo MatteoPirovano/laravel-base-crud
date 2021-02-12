@@ -25,7 +25,7 @@ class BeerController extends Controller
      */
     public function create()
     {
-        //
+        return view("beers.create");
     }
 
     /**
@@ -36,7 +36,14 @@ class BeerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data=$request->all();
+        $beer= new Beer();
+        $beer->name = $data["name"];
+        $beer->country = $data["country"];
+        $beer->alcohol_content = $data["alcohol_content"];
+        $beer->description = $data["description"];
+        $beer->save();
+        return redirect()->route('beers.index');
     }
 
     /**

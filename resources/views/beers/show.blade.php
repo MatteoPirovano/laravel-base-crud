@@ -17,6 +17,6 @@
 
 @section('footer')
     <div class="text-right">
-      <a href="{{route('beers.index')}}" class="btn btn-lg btn-primary">Elenco birre</a>
+      <a href="{{route('beers.index')}}" class="btn btn-lg btn-warning">Elenco birre</a>
     </div>
 @endsection
